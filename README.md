@@ -35,6 +35,7 @@ This repository provides instructions for setting up TensorFlow with GPU support
     ```
 
 ## Verification
+
 To verify that TensorFlow is using the GPU, run the following Python code:
 ```python
 import tensorflow as tf
@@ -42,3 +43,11 @@ print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 ```
 
 If TensorFlow is correctly set up, you should see the number of GPUs available.
+
+## Warning
+
+- If you get an error while running the code that's probably due to an incompatible NumPy version installed, so we will install another version:
+    ```bash
+    pip install numpy==1.25.2
+    ```
+Now, try the [verification test](https://github.com/Assem-ElQersh/TensorFlow-GPU-Setup/edit/main/README.md#verification) again.
